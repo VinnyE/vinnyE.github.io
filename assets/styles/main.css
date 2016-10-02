@@ -49,21 +49,77 @@ table {
 
 /*** base ***/
 html {
-  font-size: 16px;
+  font-size: 1rem;
+
 }
 body {
   line-height: 1.5;
+	font-family: 'Roboto', sans-serif;
+	color: #777;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-/*** layout ***/
+/*** general ***/
+.about,
+.skills,
+.projects,
+.contact {
+	/*border-bottom: 2px solid rgba(218, 216, 218, 0.3);*/
+	padding: 1em 2em;
+	border-radius: 5px;
+}
+.container {
+	margin-top: 44px;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.skills,
+.contact {
+	background: #D9DDD7;
+}
+
+/***main header***/
+nav {
+	color: white;
+}
 .main-header {
-  width: 25%;
+  width: 30%;
   height: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  color: white;
   background: #C1CBBA;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1em;
+	z-index: 100;
+	visibility: hidden;
+}
+img {
+	height: 25%;
+}
+.main-header a {
+	padding: 1em 8em;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+/*** sticky header ***/
+.sticky-header {
+	background: #C3C1C3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+}
+.sticky-header a {
+	padding: .25em .75em;
+	display: inline-block;
+}
+.sticky-header h4 {
+	margin: 0;
 }
 
 /*** typography ***/
@@ -89,9 +145,44 @@ h3 {
 h4 {
   font-size: 1.25rem;
 }
+.section-heading {
+	color: #666;
+}
 
 /*** links ***/
 a {
   text-decoration: none;
   color: white;
+	display: block;
+}
+
+/*** form ***/
+
+#form-name,
+#form-email {
+	width: 45%;
+}
+input[type="text"] {
+	margin-bottom: 1em;
+	height: 2.5em;
+}
+input[type="text"],
+textarea {
+	outline: none;
+	padding: .5em;
+	border: 1px solid #DAD8DA;
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font: inherit;
+}
+#form-name {
+	margin-right: 10%;
+}
+#form-subject,
+#form-text-area {
+	width: 100%;
+}
+textarea {
+	height: 10em;
 }
