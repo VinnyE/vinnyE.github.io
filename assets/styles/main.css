@@ -52,6 +52,17 @@ table {
 	box-sizing: border-box;
 }
 
+/** clearfix **/
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
 /*** base ***/
 html {
   font-size: 1rem;
@@ -68,10 +79,8 @@ body {
 /*** general ***/
 .about,
 .skills,
-.projects,
 .contact {
-	/*border-bottom: 2px solid rgba(218, 216, 218, 0.3);*/
-	padding: 1em 1em;
+	padding: 1em;
 	border-radius: 5px;
 }
 .container {
@@ -96,10 +105,10 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*padding: 0 1em;*/
 	z-index: 100;
 	visibility: hidden;
 }
+
 nav {
 		width: 100%;
 }
@@ -146,11 +155,14 @@ footer {
 	margin: 0;
 	display: inline-block;
 }
-.menu-toggle {
+.nav-toggle {
 	display: flex;
 	align-items: center;
+	padding: 1em;
+	cursor: pointer;
+	color: white;
 }
-.menu-toggle i {
+.nav-toggle i {
 	margin-right: .5em;
 }
 
@@ -159,9 +171,16 @@ footer {
 .nav-toggle-list {
 	background: #C3C1C3;
 	margin-top: 2.5rem;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 97;
+	opacity: 1;
+	transition: opacity 0.5s linear;
 }
 .hidden {
 	visibility: hidden;
+	opacity: 0;
 }
 
 /*** typography ***/
@@ -191,6 +210,10 @@ h4 {
 .section-heading {
 	color: #666;
 }
+.projects h2 {
+	padding-left: 1rem;
+	padding-top: 1rem;
+}
 
 /*** links ***/
 
@@ -208,6 +231,48 @@ a {
 }
 .social a:hover {
 	opacity: .5;
+}
+
+/*** Skills ***/
+
+.skills-icons i {
+	font-size: 3rem;
+	margin-right: .5rem;
+	width: 3rem;
+}
+.skills-icons li {
+	display: inline-block;
+	width: 45%;
+	margin-right: 5%;
+	margin-bottom: 1rem;
+}
+.skills-icons li:nth-of-type(5) {
+	margin-bottom: 0;
+}
+
+/*** Projects ***/
+
+.projects img {
+	max-width: 100%;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+}
+.projects > div {
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	max-width: 100%;
+}
+.projects div:nth-of-type(even) {
+	background: #D9DDD7;
+}
+.projects > div:nth-of-type(n + 3) {
+	border: 1px solid rgba(217, 221, 215, .5);
+}
+.description {
+	padding: 0 1em 1em;
+}
+.project-description {
+	padding: 0 1em 0;
 }
 
 /*** form ***/
@@ -237,4 +302,93 @@ textarea {
 }
 textarea {
 	height: 10em;
+	margin-bottom: .5rem;
+	border: none;
+}
+button {
+	border-radius: 5px;
+	border: 0;
+	padding: .75em 1em;
+	font-family: inherit;
+	font-size: 1rem;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	width: 8rem;
+	white-space: nowrap;
+}
+button:hover {
+	opacity: .8;
+	transition: opacity 0.5s ease;
+}
+button[type="submit"] {
+	background: #7A8F6A;
+	margin-right: 1rem;
+}
+button[type="reset"] {
+	background: #936D77;
+}
+
+/*** media query ***/
+
+@media (max-width: 374px) {
+	.skills-icons li {
+		display: block;
+		width: 100%;
+	}
+}
+@media (max-width: 450px) {
+	button,
+	#form-name,
+	#form-email {
+		display: block;
+		width: 100%;
+	}
+}
+@media (min-width: 600px) {
+	/*.container {
+		max-width: 80%;
+	}*/
+	.projects img {
+		float: left;
+		max-width: 50%;
+		margin-bottom: 0;
+		margin-right: 2%;
+	}
+	.description {
+		padding: 1em;
+		float: left;
+		width: 48%;
+	}
+}
+@media (min-width: 760px) {
+	.content {
+		width: 75%;
+	}
+	.container {
+		max-width: 90%;
+	}
+	header {
+		visibility: visible;
+	}
+	.nav-toggle {
+		visibility: hidden;
+	}
+	/*h4 {
+		text-align: center;
+	}*/
+}
+@media (min-width: 900px) {
+
+
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 60%;
+	}
+	html {
+		font-size: 1.25rem;
+	}
+
 }
