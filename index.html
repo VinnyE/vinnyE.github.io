@@ -6,47 +6,83 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vinny's Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-  <!-- Header -->
-  <nav>
 
-    <section class="main-header">
-      <img />
-      <h2>Vinny</h2>
-      <h4>Front End Developer</h4>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </section>
+    <!-- Header -->
+    <header>
 
+        <img />
+        <h2>Vinny</h2>
+        <h4>Front End Developer</h4>
+
+        <!-- Main Nav -->
+        <nav>
+          <ul class="main-nav">
+            <li class="nav-items"><a href="#about">About</a></li>
+            <li class="nav-items"><a href="#skills">Skills</a></li>
+            <li class="nav-items"><a href="#contact">Contact</a></li>
+            <li class="nav-items"><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+
+        <!--Social Footer -->
+        <footer>
+          <ul class="social">
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+          </ul>
+        </footer>
+
+    </header>
+
+    <!-- Sticky Header -->
     <section class="sticky-header">
       <h4><a href="#">Vinny</a></h4>
-    </section>
-  </nav>
 
+      <div class="menu-toggle">
+        <a href="#" id="nav-toggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <span>Menu</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="nav-toggle-list hidden" id="nav-toggle-list">
+      <!-- <ul class="main-nav">
+        <li class="nav-items"><a href="#about">About</a></li>
+        <li class="nav-items"><a href="#skills">Skills</a></li>
+        <li class="nav-items"><a href="#contact">Contact</a></li>
+        <li class="nav-items"><a href="#projects">Projects</a></li>
+      </ul> -->
+    </div>
+
+  <!-- Content -->
   <div class="container">
 
-    <section class="about">
+    <!-- About -->
+    <section class="about" id="about">
       <h2 class="section-heading">About</h2>
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </section>
 
-    <section class="skills">
+    <!-- Skills -->
+    <section class="skills" id="skills">
       <h2 class="section-heading">Skills</h2>
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </section>
 
-    <section class="projects">
+    <!-- Projects -->
+    <section class="projects" id="projects">
       <h2 class="section-heading">Projects</h2>
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </section>
 
-    <section class="contact">
+    <!-- Contact -->
+    <section class="contact" id="contact">
       <h2 class="section-heading">Contact</h2>
       <form>
         <input type="text" name="name" id="form-name" placeholder="Name"/><!---
@@ -57,7 +93,8 @@
     </section>
 
 
-  </div>
+  </div> <!-- /container -->
 
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
