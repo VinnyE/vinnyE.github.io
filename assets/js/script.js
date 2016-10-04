@@ -3,9 +3,9 @@ var navToggle = document.getElementById('nav-toggle');
 var mainNav = document.getElementById('main-nav');
 var mainNavClone = mainNav.cloneNode(true);
 
-navToggle.addEventListener('click', function(e) {
-  e.preventDefault();
+mainNavClone.children[0].classList.remove('selected');
 
+navToggle.addEventListener('click', function() {
   if (navToggleList.classList.contains('hidden')) {
     navToggleList.appendChild(mainNavClone);
   } else {
