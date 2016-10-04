@@ -15,5 +15,29 @@ navToggle.addEventListener('click', function(e) {
   navToggleList.classList.toggle('hidden');
 });
 
-/* TODO
-Resolve toggle bug. When Menu is toggled, it removes mainNav from header */
+// Menu scroll background
+var about = mainNav.children[0];
+var skills = mainNav.children[1];
+var projects = mainNav.children[2];
+var scrollPosition = 0;
+
+function removeSelected() {
+  for (var i = 0; i < mainNav.children.length; i++) {
+    mainNav.children[i].classList.remove('selected');
+  }
+}
+
+window.addEventListener('scroll', function() {
+  scrollPosition = window.scrollY;
+
+  if (scrollPosition < 100) {
+    removeSelected();
+    about.classList.add('selected');
+  } else if (scrollPosition < 400 ) {
+    removeSelected();
+    skills.classList.add('selected');
+  } else {
+    removeSelected();
+    projects.classList.add('selected');
+  }
+});
