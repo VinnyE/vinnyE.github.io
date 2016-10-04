@@ -64,6 +64,7 @@ table {
 }
 
 /*** base ***/
+
 html {
   font-size: 1rem;
 
@@ -72,11 +73,11 @@ body {
   line-height: 1.5;
 	font-family: 'Roboto', sans-serif;
 	color: #777;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	background: #fff;
 }
 
 /*** general ***/
+
 .about,
 .skills,
 .contact {
@@ -92,7 +93,7 @@ body {
 	background: #D9DDD7;
 }
 
-/***main header***/
+/*** Main Header***/
 
 header {
 	color: white;
@@ -108,22 +109,28 @@ header {
 	z-index: 100;
 	visibility: hidden;
 }
-
-nav {
-		width: 100%;
-}
 header img {
-	height: 25%;
+	border-radius: 50%;
+	margin-top: 30%;
+	margin-bottom: 15%;
+	max-width: 55%;
+}
+header h4 {
+	margin-bottom: 2rem;
+}
+nav {
+	width: 100%;
 }
 .nav-items {
 	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 	text-align: center;
 }
-.nav-items li:last-child {
+.main-nav li:last-child {
 	border: none;
 }
 footer {
 	margin-top: auto;
+	color: white;
 }
 .social {
 	display: flex;
@@ -133,8 +140,31 @@ footer {
 .social li {
 	border-bottom: none;
 }
+.selected {
+	background: white;
+}
+.selected a {
+	color: #666;
+}
+h2 span {
+	position: absolute;
+	top: -50px;
+}
 
-/*** sticky header ***/
+/*** Main Footer ***/
+
+.main-footer {
+	background: #C3C1C3;
+	padding: 0 .75em;
+}
+.main-footer .social {
+	justify-content: flex-start;
+}
+.main-footer li:nth-of-type(1) {
+	margin-right: auto;
+}
+
+/*** Sticky Header ***/
 
 .sticky-header {
 	background: #C3C1C3;
@@ -146,10 +176,6 @@ footer {
 	height: 2.5rem;
 	display: flex;
 	justify-content: space-between;
-}
-.sticky-header a {
-	padding: .25em .75em;
-	display: inline-block;
 }
 .sticky-header h4 {
 	margin: 0;
@@ -166,7 +192,7 @@ footer {
 	margin-right: .5em;
 }
 
-/*** Nav toggle ***/
+/*** Nav Toggle ***/
 
 .nav-toggle-list {
 	background: #C3C1C3;
@@ -183,7 +209,7 @@ footer {
 	opacity: 0;
 }
 
-/*** typography ***/
+/*** General Typography ***/
 
 h1,
 h2,
@@ -200,6 +226,7 @@ h1 {
 }
 h2 {
   font-size: 2.25rem;
+	position: relative;
 }
 h3 {
   font-size: 1.5rem;
@@ -210,12 +237,8 @@ h4 {
 .section-heading {
 	color: #666;
 }
-.projects h2 {
-	padding-left: 1rem;
-	padding-top: 1rem;
-}
 
-/*** links ***/
+/*** Links ***/
 
 a {
   text-decoration: none;
@@ -226,11 +249,21 @@ a {
 	padding: 1em;
 	width: 100%;
 }
+.sticky-header a {
+	padding: .25em .75em;
+	display: inline-block;
+}
 .social a {
-	padding: 1em 1em;
+	padding: 1em;
 }
 .social a:hover {
 	opacity: .5;
+}
+.main-footer a {
+	padding: .25em 1em 0;
+}
+.main-footer li:last-child a {
+	padding-right: 0;
 }
 
 /*** Skills ***/
@@ -257,6 +290,10 @@ a {
 	border-radius: 10px;
 	margin-bottom: 1rem;
 }
+.projects h2 {
+	padding-left: 1rem;
+	padding-top: 1rem;
+}
 .projects > div {
 	border-radius: 10px;
 	margin-bottom: 1rem;
@@ -275,61 +312,7 @@ a {
 	padding: 0 1em 0;
 }
 
-/*** form ***/
-
-#form-name,
-#form-email {
-	width: 45%;
-}
-input[type="text"] {
-	margin-bottom: 1em;
-	height: 2.5em;
-}
-input[type="text"],
-textarea {
-	outline: none;
-	padding: .5em;
-	border: 1px solid #DAD8DA;
-	border-radius: 5px;
-	font: inherit;
-}
-#form-name {
-	margin-right: 10%;
-}
-#form-subject,
-#form-text-area {
-	width: 100%;
-}
-textarea {
-	height: 10em;
-	margin-bottom: .5rem;
-	border: none;
-}
-button {
-	border-radius: 5px;
-	border: 0;
-	padding: .75em 1em;
-	font-family: inherit;
-	font-size: 1rem;
-	color: white;
-	font-weight: bold;
-	cursor: pointer;
-	width: 8rem;
-	white-space: nowrap;
-}
-button:hover {
-	opacity: .8;
-	transition: opacity 0.5s ease;
-}
-button[type="submit"] {
-	background: #7A8F6A;
-	margin-right: 1rem;
-}
-button[type="reset"] {
-	background: #936D77;
-}
-
-/*** media query ***/
+/*** Media Queries ***/
 
 @media (max-width: 374px) {
 	.skills-icons li {
@@ -346,9 +329,6 @@ button[type="reset"] {
 	}
 }
 @media (min-width: 600px) {
-	/*.container {
-		max-width: 80%;
-	}*/
 	.projects img {
 		float: left;
 		max-width: 50%;
@@ -374,21 +354,20 @@ button[type="reset"] {
 	.nav-toggle {
 		visibility: hidden;
 	}
-	/*h4 {
-		text-align: center;
-	}*/
+	.main-footer {
+		visibility: hidden;
+	}
 }
-@media (min-width: 900px) {
-
-
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 940px) {
 	.container {
-		max-width: 60%;
+		max-width: 75%;
+	}
+}
+@media (min-width: 1280px) {
+	.container {
+		max-width: 45em;
 	}
 	html {
 		font-size: 1.25rem;
 	}
-
 }
