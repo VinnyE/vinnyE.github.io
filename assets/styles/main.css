@@ -7,7 +7,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -128,9 +128,12 @@ nav {
 .main-nav li:last-child {
 	border: none;
 }
-footer {
+footer.sidebar {
 	margin-top: auto;
 	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .social {
 	display: flex;
@@ -156,6 +159,7 @@ h2 span {
 .main-footer {
 	background: #C3C1C3;
 	padding: 0 .75em;
+	color: white;
 }
 .main-footer .social {
 	justify-content: flex-start;
@@ -237,6 +241,9 @@ h4 {
 .section-heading {
 	color: #666;
 }
+.sidebar span {
+	font-size: .875rem;
+}
 
 /*** Links ***/
 
@@ -264,6 +271,15 @@ a {
 }
 .main-footer li:last-child a {
 	padding-right: 0;
+}
+.projects a,
+.about a {
+	color: #666;
+	display: inline;
+}
+.projects a:hover,
+.about a:hover {
+	text-decoration: underline;
 }
 
 /*** Skills ***/
@@ -299,7 +315,7 @@ a {
 	margin-bottom: 1rem;
 	max-width: 100%;
 }
-.projects div:nth-of-type(even) {
+.projects > div:nth-of-type(even) {
 	background: #D9DDD7;
 }
 .projects > div:nth-of-type(n + 3) {
@@ -322,15 +338,20 @@ a {
 }
 @media (min-width: 600px) {
 	.projects img {
-		float: left;
-		max-width: 50%;
+		display: inline-block;
 		margin-bottom: 0;
-		margin-right: 2%;
+		vertical-align: middle;
 	}
 	.description {
 		padding: 1em;
-		float: left;
 		width: 48%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.project-img {
+		width: 50%;
+		display: inline-block;
+		padding: 1em;
 	}
 }
 @media (min-width: 760px) {
