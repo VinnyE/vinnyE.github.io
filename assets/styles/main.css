@@ -347,7 +347,7 @@ a {
 }
 @media (min-width: 760px) {
 	.content {
-		width: 75%;
+		max-width: 75%;
 	}
 	.container {
 		max-width: 90%;
@@ -370,6 +370,9 @@ a {
 @media (min-width: 1280px) {
 	.container {
 		max-width: 45em;
+	}
+	header {
+		max-width: 22em;
 	}
 	html {
 		font-size: 1.25rem;
