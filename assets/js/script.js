@@ -1,3 +1,4 @@
+// Small screen size menu toggle
 var navToggleList = document.getElementById('nav-toggle-list');
 var navToggle = document.getElementById('nav-toggle');
 var mainNav = document.getElementById('main-nav');
@@ -15,7 +16,7 @@ navToggle.addEventListener('click', function() {
   navToggleList.classList.toggle('hidden');
 });
 
-// Menu scroll background
+// Side bar background scroll
 var about = mainNav.children[0];
 var skills = mainNav.children[1];
 var projects = mainNav.children[2];
