@@ -20,7 +20,7 @@ var paths = {
   html: './src/*.html',
   scripts: './src/js/*.js',
   css: './src/css/*.css',
-  scss: './src/scss/*.scss',
+  scss: './src/scss/**/*.scss',
   dist: './dist',
   distjs: './dist/js',
   distcss: './dist/css'

@@ -1,0 +1,19 @@
+.grid {
+  max-width: rem($bp-lg * 1px);
+  margin: 0 auto;
+
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @include create-col-classes('-sm', $grid__cols, sm);
+  @include create-col-classes('-md', $grid__cols, md);
+  @include create-col-classes('-lg', $grid__cols, lg);
+}

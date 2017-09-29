@@ -17,8 +17,11 @@ $font-weight--black: 900;
 $base__font-size: 16px;
 $base__line: 24px;
 
-
 // Breakpoints
-$bp-sm: 1px;
-$bp-md: 768px;
-$bp-lg: 1200px;
+$bp-sm: 1;
+$bp-md: 768;
+$bp-lg: 1200;
+
+// Grid Config
+$grid__cols: 12;
+
