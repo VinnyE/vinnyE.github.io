@@ -1,0 +1,28 @@
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__list-item {
+    font-weight: $font-weight--light;
+    font-size: rem(25px);
+    padding-left: em(10px, 36px);
+    padding-right: em(10px, 36px);
+    text-transform: uppercase;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    a {
+      &:hover {
+        color: $persian-red;
+      }
+    }
+  }
+
+  @include mq(sm) {
+    justify-content: center;
+  }
+}

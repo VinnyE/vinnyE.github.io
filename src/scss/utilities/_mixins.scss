@@ -23,7 +23,7 @@
     }
   }
   @else if $break == "md" {
-    @media (min-width: em($bp-md + 1 * 1px)) {
+    @media (min-width: em($bp-md * 1px)) {
       @content;
     }
   }

@@ -11,6 +11,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    padding-left: em(10px);
+    padding-right: em(10px);
   }
 
   @include create-col-classes('-sm', $grid__cols, sm);
