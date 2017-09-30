@@ -30,10 +30,14 @@ h1 {
 
 h2 {
   font-size: rem(25px);
+  line-height: 1.25;
+  margin-bottom: em(10px, 25px);
 }
 
 h3 {
   font-size: rem(20px);
+  line-height: 1.25;
+  margin-bottom: em(10px, 20px);
 }
 
 p {

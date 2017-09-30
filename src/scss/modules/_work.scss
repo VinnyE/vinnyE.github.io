@@ -1,0 +1,30 @@
+.work {
+  .grid__row {
+    padding: 0;
+  }
+
+  &__header {
+    padding: 0 em(10px, 20px);
+  }
+  &__project {
+    margin-bottom: em(30px);
+    padding: 0 em(10px);
+    
+    &-info-copy {
+      margin-bottom: em(5px);
+    }
+
+    &-info-link {
+      color: $persian-red;
+    }
+  }
+
+  .project-image {
+    width: 100%;
+    margin-bottom: em(10px);
+
+    @include mq(md) {
+      max-width: em(278px);
+    }
+  }
+}
