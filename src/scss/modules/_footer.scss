@@ -1,0 +1,26 @@
+.footer {
+  padding-bottom: em(10px);
+  font-size: em(12px);
+  &__copyright {
+    margin-right: auto;
+    flex-basis: 25%;
+  }
+
+  &__social-links {
+    &-item {
+      a:hover {
+        color: $persian-red;
+      }
+    }
+  }
+
+  .flex-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    ul {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 .work {
+  margin-bottom: em(60px);
   .grid__row {
     padding: 0;
   }
@@ -25,6 +26,15 @@
 
     @include mq(md) {
       max-width: em(278px);
+    }
+  }
+
+  .additional-work {
+    font-size: em(20px);
+    padding: 0 em(10px);
+
+    a {
+      color: $persian-red;
     }
   }
 }
