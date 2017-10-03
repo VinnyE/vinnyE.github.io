@@ -1,15 +1,31 @@
 .footer {
   padding-bottom: em(10px);
   font-size: em(12px);
+
   &__copyright {
-    margin-right: auto;
-    flex-basis: 25%;
+    @include mq(sm) {
+      text-align: center;
+    }
+
+    @include mq(md) {
+      text-align: left;
+    }
   }
 
   &__social-links {
+    @include mq(sm) {
+      text-align: center;
+    }
+
+    @include mq(md) {
+      text-align: right;
+    }
+
     &-item {
+      display: inline-block;
       a:hover {
         color: $persian-red;
+        transition: 0.5s all ease;        
       }
     }
   }

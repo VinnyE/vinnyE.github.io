@@ -17,7 +17,17 @@
     a {
       &:hover {
         color: $persian-red;
+        transition: 0.5s all ease;
       }
+    }
+
+      
+    @include mq(sm) {
+      font-size: rem(20px);
+    }
+
+    @include mq(md) {
+      font-size: rem(25px);
     }
   }
 

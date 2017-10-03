@@ -26,12 +26,21 @@ h1, h2, h3 {
 
 h1 {
   font-size: rem(39.063px);
+  
+  @include mq(sm) {
+    font-size: rem(36px);
+  }
+
+  @include mq(md) {
+    font-size: rem(39.063px);
+  }
 }
 
 h2 {
   font-size: rem(25px);
   line-height: 1.25;
   margin-bottom: em(10px, 25px);
+  
 }
 
 h3 {
