@@ -1,5 +1,10 @@
 .about {
   margin-bottom: em(60px);
+
+  &__link {
+    color: $persian-red;
+  }
+  
   &__copy {
     margin-bottom: em(15px);
 
