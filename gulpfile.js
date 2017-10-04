@@ -7,6 +7,7 @@ var usemin = require('gulp-usemin')
 var htmlmin = require('gulp-htmlmin')
 var cssnano = require('gulp-cssnano')
 var useref = require('gulp-useref')
+const imagemin = require('gulp-imagemin');
 var eslint = require('gulp-eslint')
 var sourcemaps = require('gulp-sourcemaps')
 var babel = require('gulp-babel')
@@ -23,7 +24,9 @@ var paths = {
   scss: './src/scss/**/*.scss',
   dist: './dist',
   distjs: './dist/js',
-  distcss: './dist/css'
+  distcss: './dist/css',
+  assets: './src/assets/*',
+  distassets: './dist/assets'
 }
 
 var supported = [
@@ -71,6 +74,12 @@ gulp.task('scss', () => {
     }))
 })
 
+gulp.task('assets', () => {
+  gulp.src(paths.assets)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.distassets))
+})
+
 gulp.task('usemin', () => {
   return gulp.src(paths.html)
     .pipe(usemin({
@@ -84,7 +93,7 @@ gulp.task('usemin', () => {
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['scss', 'usemin'],
+    ['assets', 'scss', 'usemin'],
     callback
   )
 })
